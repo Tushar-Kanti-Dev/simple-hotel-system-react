@@ -3,7 +3,16 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <header>
+        <>
+
+        <div className="container-fluid">
+        <div className="row">
+            <div className="col-12 bg-info">
+            😀🤣😆
+            </div>
+        </div>
+        </div>
+        <header className='sticky-top'>
             <div className="container-fluid bg-dark text-white text-center">
                 <div className="row">
                     <div className="company-name col-md-4">
@@ -21,6 +30,7 @@ const Header = () => {
                 </div>
             </div>
         </header>
+        </>
     );
 };
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 
-const Room = ({room}) => {
-    const {name, img ,price} = room;
+const HomeCard = ({room}) => {
+    const {name, price ,img, rating} = room;
     return (
-        <div  className='gx-2 col-md-6 col-lg-4 m-0'>
+        <div  className='col-md-6 col-lg-4'>
              <Card>
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
@@ -21,4 +21,4 @@ const Room = ({room}) => {
     );
 };
 
-export default Room;
+export default HomeCard;
