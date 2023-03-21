@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1, 
+        "name": "Golden-Tiube", 
+        "img": "https://i.ibb.co/hW6fwg7/bed1-1.jpg",
+        "quantity": 3,
+        "price": 100
+    },
+
+    {
+        "id": 2, 
+        "name": "Silver-dahs", 
+        "img": "https://i.ibb.co/yFK4W5f/bed2-1.jpg",
+        "quantity": 2,
+        "price":90
+    },
+
+    {
+        "id": 3,
+        "name": "Platinam-Prime",
+        "img": "https://i.ibb.co/F6sbHNc/bed3-1.jpg",
+        "quantity": 2,
+        "price": 150
+    },
+
+    {
+        "id": 4, 
+        "name": "Platinam-prime",
+        "img": "https://i.ibb.co/ssHgmSH/bed4-1.jpg",
+        "quantity": 5,
+        "price": 140
+    }
+]
+
+
+
+
