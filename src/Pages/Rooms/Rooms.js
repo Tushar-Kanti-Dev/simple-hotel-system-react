@@ -7,7 +7,7 @@ const Rooms = () => {
     const [rooms, setRooms] = useRooms();
     return (
         <>
-            {/* <Carousels/> */}
+            <Carousels/>
             <div className="container-fluid mt-4">
 
                 <h1 className='text-center'>---WelCome to Hotel---</h1>
