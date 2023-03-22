@@ -9,9 +9,9 @@ const Home = () => {
   return (
     <>
       <Carousels />
-      <HomeCards/>
-      <HotelTitle/>
-      <VideoCart></VideoCart>
+      <HomeCards />
+      <HotelTitle />
+      <VideoCart/>
     </>
   );
 };
