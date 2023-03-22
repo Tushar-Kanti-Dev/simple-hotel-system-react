@@ -1,0 +1,13 @@
+.main-section{
+    background-color: #508bfc;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+.main-form{
+    background-color: aliceblue;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-top: 30px;
+}

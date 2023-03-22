@@ -1,5 +1,6 @@
 .main-header{
-    height: 100px;
+    height: auto;
+    padding: 9px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,8 +9,6 @@
     
 }
 .social-icons{
-    display: flex;
-    justify-content: end;
     font-size: 40px;
    
 }
@@ -17,3 +16,4 @@
     margin-right: 10px;
     color: white;
 }
+
