@@ -46,8 +46,13 @@ const Header = () => {
                       :
                       <Link to='/login'>LogIn</Link>
                     }
-                    <Link to='/register'>Register</Link>
-
+                    {
+                      user?.uid
+                      ?
+                      <img className="user-photo" src={user.photoURL} alt="" />
+                      :
+                      <Link to='/register'>Register</Link>
+                    }
                   </div>
                 </div>
               </div>
