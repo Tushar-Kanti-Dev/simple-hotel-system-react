@@ -9,6 +9,7 @@ import Contact from './Pages/Contact/Contact';
 import About from './Pages/About/About';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
+import RequiredAuth from './Pages/RequiredAuth/RequiredAuth';
 
 
 
@@ -19,7 +20,11 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/Rooms' element={<Rooms></Rooms>}/>
+        <Route path='/Rooms' element={
+          <RequiredAuth>
+            <Rooms/>
+          </RequiredAuth>
+        }/>
         <Route path='/contact' element={<Contact></Contact>}/>
         <Route path='/about' element={<About></About>}/>
         <Route path='/login' element= {<Login></Login>}/>

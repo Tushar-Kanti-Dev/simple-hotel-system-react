@@ -1,11 +1,32 @@
+import { getAuth } from "firebase/auth";
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import useFirebase from "../../hooks/useFirebase";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import app from "../../firebase.init";
+// import useFirebase from "../../hooks/useFirebase";
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import "./Login.css";
 
+const auth = getAuth(app);
+
 const Login = () => {
-    const {handleSignInWithGoogle, submitForm} = useFirebase()
+    // const {handleSignInWithGoogle, submitForm} = useFirebase();
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+
+    const from = location?.state?.from?.pathname || '/';
+    const handleGoogleSignIn = () =>{
+        signInWithGoogle()
+        .then( ()=>{
+            navigate(from, {replace: true})
+        })
+    }
+    const submitForm = (e) =>{
+        e.preventDefault()
+    }
+
   return (
     <div className="container main-section">
       
@@ -35,7 +56,7 @@ const Login = () => {
                         <Link to='/register'>register now</Link>
                     </div>
                     <div className="google-sign text-center m-3">
-                        <button onClick={handleSignInWithGoogle}>Sign In With Google</button>
+                        <button onClick={handleGoogleSignIn}>Sign In With Google</button>
                     </div>
                 </div>
                 <div className="login-button text-center">
