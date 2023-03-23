@@ -5,7 +5,7 @@ import useFirebase from "../../hooks/useFirebase";
 import "./Header.css";
 
 const Header = () => {
-  const {user} = useFirebase();
+  const {user, handleSignOut} = useFirebase();
   return (
     <>
       <div className="container-fluid">
@@ -42,7 +42,7 @@ const Header = () => {
                     {
                       user?.uid
                       ?
-                      <button>Sign OUt</button>
+                      <button onClick={handleSignOut}>Sign OUt</button>
                       :
                       <Link to='/login'>LogIn</Link>
                     }
