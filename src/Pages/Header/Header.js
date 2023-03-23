@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useFirebase from "../../hooks/useFirebase";
 
 import "./Header.css";
 
 const Header = () => {
-  // const {user, signOutHandle} = useFirebase();
+  const {user} = useFirebase();
   return (
     <>
       <div className="container-fluid">
@@ -38,9 +39,13 @@ const Header = () => {
                 </div>
                 <div className="col-md-6 d-flex justify-content-center align-items-center">
                   <div className="login-content">
-                 
-                    <Link to='/login'>LogIn</Link>
-                    
+                    {
+                      user?.uid
+                      ?
+                      <button>Sign OUt</button>
+                      :
+                      <Link to='/login'>LogIn</Link>
+                    }
                     <Link to='/register'>Register</Link>
 
                   </div>
