@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import "./Header.css";
 
 const Header = () => {
+  // const {user, signOutHandle} = useFirebase();
   return (
     <>
       <div className="container-fluid">
@@ -28,16 +30,19 @@ const Header = () => {
               <div className="row">
                 <div className="col-md-6">
                 <div className="social-icons d-flex justify-content-md-end justify-content-sm-center">
-              <a href="https://fontawesome.com/icons/facebook?f=brands&s=solid&an=beat&sz=2xs"><i class="fa-brands fa-facebook fa-beat fa-2xs text-white"></i></a>
-              <a href="https://fontawesome.com/icons/facebook?f=brands&s=solid&an=beat&sz=2xs"><i class="fa-brands fa-instagram fa-spin fa-2xs"></i></a>
-              <a href="https://fontawesome.com/icons/facebook?f=brands&s=solid&an=beat&sz=2xs"><i class="fa-brands fa-twitter fa-beat-fade fa-2xs"></i></a>
-              <a href="https://fontawesome.com/icons/facebook?f=brands&s=solid&an=beat&sz=2xs"><i class="fa-brands fa-linkedin-in fa-beat fa-2xs"></i></a>
+                  <a href="https://fontawesome.com/icons/facebook?f=brands&s=solid&an=beat&sz=2xs"><i className="fa-brands fa-facebook fa-beat fa-2xs text-white"></i></a>
+                  <a href="https://fontawesome.com/icons/facebook?f=brands&s=solid&an=beat&sz=2xs"><i className="fa-brands fa-instagram fa-spin fa-2xs"></i></a>
+                  <a href="https://fontawesome.com/icons/facebook?f=brands&s=solid&an=beat&sz=2xs"><i className="fa-brands fa-twitter fa-beat-fade fa-2xs"></i></a>
+                  <a href="https://fontawesome.com/icons/facebook?f=brands&s=solid&an=beat&sz=2xs"><i className="fa-brands fa-linkedin-in fa-beat fa-2xs"></i></a>
               </div>
                 </div>
                 <div className="col-md-6 d-flex justify-content-center align-items-center">
                   <div className="login-content">
-                  <Link to='/login'>LogIn</Link>
-                  <Link to='/register'>Register</Link>
+                 
+                    <Link to='/login'>LogIn</Link>
+                    
+                    <Link to='/register'>Register</Link>
+
                   </div>
                 </div>
               </div>
