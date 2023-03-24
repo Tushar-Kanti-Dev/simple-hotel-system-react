@@ -10,6 +10,7 @@ import About from './Pages/About/About';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import RequiredAuth from './Pages/RequiredAuth/RequiredAuth';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 
@@ -29,6 +30,9 @@ function App() {
         <Route path='/about' element={<About></About>}/>
         <Route path='/login' element= {<Login></Login>}/>
         <Route path='/register' element= {<Register></Register>}/>
+
+
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer/>
     </>
